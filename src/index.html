@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>electron-tabs-demo</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body style="margin:0">
+  
+  <div class="etabs-tabgroup">
+    <div class="etabs-tabs"></div>
+    <div class="etabs-buttons"></div>
+  </div>
+  <div class="etabs-views"></div>
+  
+  
+  <script>
+    const TabGroup = require('electron-tabs')
+  
+    let tabGroup = new TabGroup();
+  
+    tabGroup.addTab({
+      title: 'Whatsapp',
+      src: 'https://web.whatsapp.com',
+      webviewAttributes: {
+        useragent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36"
+      },
+      visible: true,
+      active: true
+    });
+  
+    tabGroup.addTab({
+      title: "Telegram",
+      src: "https://web.telegram.org/",
+    });
+
+    tabGroup.addTab({
+      title: "Discord",
+      src: "https://discordapp.com/app",
+    });
+  
+  </script>
+</html>
